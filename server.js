@@ -4,7 +4,7 @@ const path = require("path");
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-server.listen(process.env.PORT || 3000);
+server.listen(3000);
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/src/html/index.html");

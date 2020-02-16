@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-bgColor: black;
+    --main-contrastColor: white;
+    --light-blue: #1d16f2;
+    --main-blue: #040dbf;
+    --light-darker-blue: #03178c;
+    --dark-blue: #010626;
+    --ugly-blue: #021859;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+}
+.chat-conatiner {
+    width: 100vw;
+    height: 99.99vh;
+    color: var(--main-contrastColor);
+    background-color: var(--main-bgColor);
+    transition: 0.5s ease-in-out;
+}
+header {
+    width: 95%;
+    margin: 0 2.5%;
+    height: 10vh;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 1vh;
+    transition: 0.5s ease-in-out;
+}
+header p {
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+    transition: transform 0.5s ease-in-out;
+}
+header p:hover {
+    transform: scale(1.2);
+}
+.change-theme {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    font-size: 2em;
+    transition: 0.5s ease-in-out;
+}
+.change-theme:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+.main-app {
+    width: 95%;
+    margin: 0 2.5%;
+    height: 88vh;
+    position: relative;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    border: 3px solid var(--ugly-blue);
+    transition: 0.5s ease-in-out;
+}
+#message-container {
+    width: 100%;
+    height: 92.5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+#message-container div {
+    font-weight: bold;
+    padding: 1%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: var(--light-darker-blue);
+    border-radius: 5px;
+    width: 60%;
+    transition: 0.5s ease-in-out;
+}
+#message-container div:nth-child(2n) {
+    position: relative;
+    margin: 0 0;
+    margin-top: 2%;
+    margin-right: 2%;
+    left: 38%;
+    background-color: var(--ugly-blue);
+}
+#send-container {
+    width: 95%;
+    margin: 0 2.5%;
+    height: 7.5%;
+    display: flex;
+    align-items: center;
+}
+#message-input {
+    cursor: pointer;
+    width: 90%;
+    height: 70%;
+    margin-right: 2.5%;
+    background-color: var(--light-blue);
+    color: var(--main-contrastColor);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    outline: none;
+    color: var(--main-contrastColor);
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+#message-input::placeholder {
+    color: hsla(0, 0%, 100%, 0.53);
+    text-align: center;
+    font-size: 1.2em;
+}
+#message-input:hover,
+#message-input:focus,
+#send-button:hover {
+    border: 1px solid var(--main-contrastColor);
+    transform: scaleY(1.2);
+}
+#send-button {
+    cursor: pointer;
+    min-width: 50px;
+    width: 7.5%;
+    height: 70%;
+    background-color: var(--light-blue);
+    color: var(--main-contrastColor);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+    transition: background 0.5s ease-in-out;
+}

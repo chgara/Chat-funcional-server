@@ -4,8 +4,8 @@ const path = require("path");
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-server.listen(3000);
-
+server.listen(process.env.PORT || 3000);
+console.log("Express server listening on port %d", app.address().port);
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/src/html/index.html");
 });

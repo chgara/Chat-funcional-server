@@ -68,4 +68,12 @@ const changeTheme = () => {
         }
     });
 };
+const dissapear = () => {
+    const btn = document.getElementById("send-name");
+    const nameSection = document.getElementById("name-section");
+    btn.addEventListener("click", () => {
+        nameSection.classList.add("none");
+    });
+};
+dissapear();
 changeTheme();

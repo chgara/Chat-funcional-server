@@ -122,7 +122,8 @@ header p:hover {
     transition: background 0.5s ease-in-out;
     transition: transform 0.3s ease-in-out;
 }
-#message-input::placeholder {
+#message-input::placeholder,
+#name-input::placeholder {
     color: hsla(0, 0%, 100%, 0.53);
     text-align: center;
     font-size: 1.2em;
@@ -145,4 +146,121 @@ header p:hover {
     font-size: 1.3em;
     transition: 0.3s ease-in-out;
     transition: background 0.5s ease-in-out;
+}
+.none {
+    display: none !important;
+}
+.name-section {
+    background-color: var(--main-bgColor);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    transition: 1s ease-in-out;
+}
+.loging-box {
+    padding: 6vh 4vh;
+    width: 50%;
+    min-width: 275px;
+    max-width: 600px;
+    border-radius: 4px;
+    position: relative;
+    background-color: hsla(201, 100%, 6%, 0.6);
+}
+.loging-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.input-group label {
+    color: white;
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin-bottom: 7px;
+}
+.input-group input {
+    border-radius: 6px;
+    width: 50%;
+    min-width: 300px;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: hsla(201, 79%, 38%, 0.3);
+    font-size: 1.5em;
+    color: white;
+    padding: 0.1em 0.25em;
+    transition: 0.3s ease-in-out;
+}
+.input-group input:focus {
+    border: 2px solid hsl(201, 100%, 50%);
+}
+
+.loging-box-button {
+    display: flex;
+    justify-content: center;
+}
+.loging-button {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    background-color: hsla(201, 100%, 50%, 0.1);
+    min-width: 300px;
+    width: 50%;
+    border-radius: 6px;
+    border: 1px solid hsl(201, 53%, 41%);
+    font-size: 1.5em;
+    color: white;
+    font-weight: lighter;
+    padding: 5px;
+    margin-top: 20px;
+}
+.loging-button:hover {
+    background-color: hsl(201, 100%, 50%, 0.3);
+}
+.loging-button:focus {
+    background-color: hsl(201, 100%, 50%, 0.3);
+}
+@media (max-width: 775px) {
+    .loging-box {
+        width: 75%;
+    }
+    .input-group input {
+        min-width: 70%;
+    }
+    .loging-button {
+        min-width: 70%;
+    }
+}
+@media (max-width: 660px) {
+    .register-box-txt {
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 600px) {
+    .loging-box {
+        width: 90% !important;
+    }
+    .input-group input {
+        min-width: 95% !important;
+    }
+    .loging-button {
+        min-width: 95% !important;
+    }
 }

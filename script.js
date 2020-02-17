@@ -3,7 +3,7 @@ const state = "p";
 if (state == "t") {
     console.log("Testing");
 } else {
-    socket = "https://try-chat.herokuapp.com/";
+    socket = io("https://try-chat.herokuapp.com/");
     console.log("Working on production");
 }
 const messageForm = document.getElementById("send-container");

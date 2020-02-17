@@ -1,4 +1,11 @@
-const socket = io("https://try-chat.herokuapp.com/");
+let socket = io("localhost:3000");
+const state = "p";
+if (state == "t") {
+    console.log("Testing");
+} else {
+    socket = "https://try-chat.herokuapp.com/";
+    console.log("Working on production");
+}
 const messageForm = document.getElementById("send-container");
 const messageContainer = document.getElementById("message-container");
 const messageInput = document.getElementById("message-input");

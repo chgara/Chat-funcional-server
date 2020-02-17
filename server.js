@@ -5,7 +5,7 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 server.listen(process.env.PORT || 3000);
-console.log("Express server listening on port %d", server.address().port);
+console.log("Server on port %d", server.address().port);
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/src/html/index.html");
 });

@@ -1,11 +1,4 @@
-let socket = io("localhost:3000");
-const state = "p";
-if (state == "t") {
-    console.log("Testing");
-} else {
-    socket = io("https://try-chat.herokuapp.com/");
-    console.log("Working on production");
-}
+const socket = io("https://try-chat.herokuapp.com/");
 const messageForm = document.getElementById("send-container");
 const messageContainer = document.getElementById("message-container");
 const messageInput = document.getElementById("message-input");
@@ -38,6 +31,7 @@ nameForm.addEventListener("submit", e => {
     });
     function appendMessage(message) {
         const messageElement = document.createElement("div");
+        messageElement.classList.add("message-div");
         messageElement.innerText = message;
         messageContainer.append(messageElement);
     }

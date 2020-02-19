@@ -75,5 +75,42 @@ const dissapear = () => {
         nameSection.classList.add("none");
     });
 };
+const clearData = () => {
+    const btnClear = document.querySelector(".erase-data");
+    btnClear.addEventListener("click", () => {
+        const messageDiv = document.getElementById("message-container");
+        const messages = document.querySelectorAll(".message-div");
+        let delay = 0;
+        messages.forEach(function callback(currentValue, index, array) {
+            function deleteMessage() {
+                const animation = currentValue.animate(
+                    [
+                        // keyframes
+                        { transform: "translateX(1%)" },
+                        { transform: "translateX(-1%)" },
+                        { transform: "translateX(1%)" },
+                        { transform: "translateX(-1%)" },
+                        { transform: "translateX(1%)" },
+                        { transform: "translateX(-1%)" },
+                        { transform: "translateX(1%)" },
+                        { transform: "translateX(-1%)" },
+                        { transform: "translateX(1%)" },
+                        { transform: "translateX(-1%)" }
+                    ],
+                    {
+                        // timing options
+                        duration: 500,
+                        delay: (delay += 500)
+                    }
+                );
+                animation.onfinish = ev => {
+                    currentValue.parentElement.removeChild(currentValue);
+                };
+            }
+            deleteMessage();
+        });
+    });
+};
 dissapear();
 changeTheme();
+clearData();

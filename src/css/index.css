@@ -49,6 +49,13 @@ header p {
 header p:hover {
     transform: scale(1.2);
 }
+.erase-data {
+    cursor: pointer;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    left: 5%;
+}
 .change-theme {
     cursor: pointer;
     position: absolute;
@@ -56,7 +63,8 @@ header p:hover {
     font-size: 2em;
     transition: 0.5s ease-in-out;
 }
-.change-theme:hover {
+.change-theme:hover,
+.erase-data:hover {
     transform: scale(1.2);
     font-weight: bold;
 }
@@ -87,7 +95,7 @@ header p:hover {
     background-color: var(--light-darker-blue);
     border-radius: 5px;
     width: 60%;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 #message-container div:nth-child(2n) {
     position: relative;
